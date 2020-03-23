@@ -29,5 +29,5 @@ date || credit || debit || balance
 Approach
 ---
 Classes:
-  - Account class (deposit, withdraw and balance method and error raising if necessary), 
+  - Account class (deposit, withdraw and balance method and error raising if necessary), ✅
   - Statement class -bank log 
