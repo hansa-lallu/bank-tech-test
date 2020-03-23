@@ -27,3 +27,6 @@ date || credit || debit || balance
 ```
 
 
+Classes:
+  - Account class (deposit, withdraw and balance method and error raising if necessary), 
+  - Statement class 
