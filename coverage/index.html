@@ -14,7 +14,7 @@
       <img src="./assets/0.12.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2020-03-23T16:59:24+00:00">2020-03-23T16:59:24+00:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2020-03-23T17:19:43+00:00">2020-03-23T17:19:43+00:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -30,7 +30,7 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         1.78
+         1.72
        </span>
     </span> hits/line
     )
@@ -39,12 +39,12 @@
   <a name="AllFiles"></a>
 
   <div>
-    <b>2</b> files in total.
+    <b>4</b> files in total.
   </div>
 
   <div class="t-line-summary">
-    <b>36</b> relevant lines,
-    <span class="green"><b>36</b> lines covered</span> and
+    <b>39</b> relevant lines,
+    <span class="green"><b>39</b> lines covered</span> and
     <span class="red"><b>0</b> lines missed. </span>
     (<span class="green">
   100.0%
@@ -73,11 +73,22 @@
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#4c3e989811738b7afe4e82e2d80606a32d9da629" class="src_link" title="lib/account.rb">lib/account.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">18</td>
+            <td class="cell--number">20</td>
             <td class="cell--number">11</td>
             <td class="cell--number">11</td>
             <td class="cell--number">0</td>
             <td class="cell--number">3.27</td>
+            
+          </tr>
+        
+          <tr class="t-file">
+            <td class="strong t-file__name"><a href="#46567e3ea3e9c6450dd73d6fa8e3f5f8b54ee744" class="src_link" title="lib/statement.rb">lib/statement.rb</a></td>
+            <td class="green strong cell--number t-file__coverage">100.00 %</td>
+            <td class="cell--number">3</td>
+            <td class="cell--number">1</td>
+            <td class="cell--number">1</td>
+            <td class="cell--number">0</td>
+            <td class="cell--number">1.00</td>
             
           </tr>
         
@@ -89,6 +100,17 @@
             <td class="cell--number">25</td>
             <td class="cell--number">0</td>
             <td class="cell--number">1.12</td>
+            
+          </tr>
+        
+          <tr class="t-file">
+            <td class="strong t-file__name"><a href="#156823b368580289d3a1c9bc978762e4933ee46e" class="src_link" title="spec/statement_spec.rb">spec/statement_spec.rb</a></td>
+            <td class="green strong cell--number t-file__coverage">100.00 %</td>
+            <td class="cell--number">5</td>
+            <td class="cell--number">2</td>
+            <td class="cell--number">2</td>
+            <td class="cell--number">0</td>
+            <td class="cell--number">1.00</td>
             
           </tr>
         
@@ -235,29 +257,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="5" data-linenumber="10">
-            <span class="hits">5</span>
-            
-
-            
-
-            <code class="ruby">    @balance += amount</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="11">
-            
-            
-
-            
-
-            <code class="ruby">  end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="12">
+          <li class="never" data-hits="" data-linenumber="10">
             
             
 
@@ -268,51 +268,18 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="13">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">  def withdraw(amount)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="5" data-linenumber="14">
+          <li class="covered" data-hits="5" data-linenumber="11">
             <span class="hits">5</span>
             
 
             
 
-            <code class="ruby">    raise &#39;Please enter a valid amount&#39; if amount.is_a?(Integer) == false</code>
+            <code class="ruby">    @balance += amount</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="4" data-linenumber="15">
-            <span class="hits">4</span>
-            
-
-            
-
-            <code class="ruby">    raise &#39;You do not have enough money to withdraw&#39; unless @balance &gt;= amount</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="3" data-linenumber="16">
-            <span class="hits">3</span>
-            
-
-            
-
-            <code class="ruby">    @balance -= amount</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="17">
+          <li class="never" data-hits="" data-linenumber="12">
             
             
 
@@ -323,7 +290,148 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="18">
+          <li class="never" data-hits="" data-linenumber="13">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="14">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  def withdraw(amount)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="5" data-linenumber="15">
+            <span class="hits">5</span>
+            
+
+            
+
+            <code class="ruby">    raise &#39;Please enter a valid amount&#39; if amount.is_a?(Integer) == false</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="4" data-linenumber="16">
+            <span class="hits">4</span>
+            
+
+            
+
+            <code class="ruby">    raise &#39;You do not have enough money to withdraw&#39; unless @balance &gt;= amount</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="17">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="3" data-linenumber="18">
+            <span class="hits">3</span>
+            
+
+            
+
+            <code class="ruby">    @balance -= amount</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="19">
+            
+            
+
+            
+
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="20">
+            
+            
+
+            
+
+            <code class="ruby">end</code>
+          </li>
+        </div>
+      
+    </ol>
+  </pre>
+</div>
+
+      
+        <div class="source_table" id="46567e3ea3e9c6450dd73d6fa8e3f5f8b54ee744">
+  <div class="header">
+    <h3>lib/statement.rb</h3>
+    <h4>
+      <span class="green">
+  100.0%
+</span>
+
+      lines covered
+    </h4>
+
+    
+
+    <div class="t-line-summary">
+      <b>1</b> relevant lines.
+      <span class="green"><b>1</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
+    </div>
+
+    
+
+  </div>
+
+  <pre>
+    <ol>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="1">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">class Statement</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="2">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="3">
             
             
 
@@ -580,7 +688,7 @@
 
             
 
-            <code class="ruby">    it &#39;raises an error if amount is not a valid number&#39; do </code>
+            <code class="ruby">    it &#39;raises an error if amount is not a valid number&#39; do</code>
           </li>
         </div>
       
@@ -602,7 +710,7 @@
 
             
 
-            <code class="ruby">    end </code>
+            <code class="ruby">    end</code>
           </li>
         </div>
       
@@ -789,7 +897,7 @@
 
             
 
-            <code class="ruby">    end </code>
+            <code class="ruby">    end</code>
           </li>
         </div>
       
@@ -822,7 +930,7 @@
 
             
 
-            <code class="ruby">      expect {subject.withdraw(10) }.to raise_error(&#39;You do not have enough money to withdraw&#39;)</code>
+            <code class="ruby">      expect { subject.withdraw(10) }.to raise_error(&#39;You do not have enough money to withdraw&#39;)</code>
           </li>
         </div>
       
@@ -850,6 +958,92 @@
       
         <div>
           <li class="never" data-hits="" data-linenumber="45">
+            
+            
+
+            
+
+            <code class="ruby">end</code>
+          </li>
+        </div>
+      
+    </ol>
+  </pre>
+</div>
+
+      
+        <div class="source_table" id="156823b368580289d3a1c9bc978762e4933ee46e">
+  <div class="header">
+    <h3>spec/statement_spec.rb</h3>
+    <h4>
+      <span class="green">
+  100.0%
+</span>
+
+      lines covered
+    </h4>
+
+    
+
+    <div class="t-line-summary">
+      <b>2</b> relevant lines.
+      <span class="green"><b>2</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
+    </div>
+
+    
+
+  </div>
+
+  <pre>
+    <ol>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="1">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">require &#39;statement&#39;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="2">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="3">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">describe Statement do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="4">
+            
+            
+
+            
+
+            <code class="ruby">  </code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="5">
             
             
 
