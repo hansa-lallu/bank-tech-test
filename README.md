@@ -26,7 +26,8 @@ date || credit || debit || balance
 10/01/2012 || 1000.00 || || 1000.00
 ```
 
-
+Approach
+---
 Classes:
   - Account class (deposit, withdraw and balance method and error raising if necessary), 
-  - Statement class 
+  - Statement class -bank log 
