@@ -96,8 +96,6 @@
       "/Users/hansa/makers/week10/bank-tech-test/lib/statement.rb": {
         "lines": [
           1,
-          null,
-          null,
           1,
           1,
           null,
@@ -111,21 +109,23 @@
       "/Users/hansa/makers/week10/bank-tech-test/spec/transaction_spec.rb": {
         "lines": [
           1,
-          null,
           1,
           null,
           1,
-          1,
-          1,
           null,
-          null,
-          null,
-          1,
           1,
           1,
           1,
           null,
           null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
           null,
           null,
           null,
@@ -143,15 +143,11 @@
           null,
           1,
           1,
-          0,
-          null,
-          1,
-          null,
           null,
           null
         ]
       }
     },
-    "timestamp": 1585001379
+    "timestamp": 1585008047
   }
 }
