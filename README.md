@@ -41,9 +41,14 @@ Edge cases
 
 Approach
 ---
+
+Initially decided to do two classes. One account class that looks after the accounts balance, deposit & withdraws. 
+Attempted the second class; Statement, to look after the printing of transactions. Half way through decided to add additional class called transactions.
+The transaction class looked after every entry 
+
 Classes:
   - Account class (deposit, withdraw and balance method and error raising if necessary), ✅
-  - Statement class -printing.
+  - Statement class -printing. ✅
   - transaction class was added later  - (date, amount, balance, type) ✅
 
 

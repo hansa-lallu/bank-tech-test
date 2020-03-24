@@ -18,9 +18,9 @@ describe Statement do
 
   describe '#sort_by_date' do
     it 'formats transactions by date in desc order' do
-      statement = Statement.new([['13/02/2020', '', '500.00', '2500.00'], ['24/03/2020', '2000.00', '', '3000.00']])
+      statement = Statement.new([['13/02/2020', '', '500.00', '2500.00'], ['24/03/2020', '2000.00', '', '3000.00'], ['25/03/2020', '2000.00', '', '3000.00']])
 
-      expect(statement.sort_by_date).to eq([['24/03/2020', '2000.00', '', '3000.00'], ['13/02/2020', '', '500.00', '2500.00']])
+      expect(statement.sort_by_date).to eq([ ['25/03/2020', '2000.00', '', '3000.00'], ['24/03/2020', '2000.00', '', '3000.00'], ['13/02/2020', '', '500.00', '2500.00']])
     end
   end
 

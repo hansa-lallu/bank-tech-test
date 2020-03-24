@@ -10,7 +10,9 @@ class Statement
   end
 
   def sort_by_date
-    @transactions.reverse
+    @transactions.sort do |transaction_x, transaction_y| 
+       Time.parse(transaction_y[0]) <=> Time.parse(transaction_x[0])
+    end
   end
   
   def format(transactions)
