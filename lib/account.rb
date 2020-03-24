@@ -10,16 +10,15 @@ class Account
     raise 'Please enter a valid amount' if amount.is_a?(Integer) == false
 
     @balance += amount
-    @transaction.entry(amount, @balance, :credit)
+    @transaction.enter_transaction(amount, @balance, :credit)
     @balance
   end
 
   def withdraw(amount)
     raise 'Please enter a valid amount' if amount.is_a?(Integer) == false
-    raise 'You do not have enough money to withdraw' unless @balance >= amount
 
     @balance -= amount
-    @transaction.entry(amount, @balance, :debit)
+    @transaction.enter_transaction(amount, @balance, :debit)
     @balance
   end
 end

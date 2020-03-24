@@ -37,9 +37,5 @@ describe Account do
     it 'raises an error if ammount is not a valid number' do
       expect { subject.withdraw('wf') }.to raise_error('Please enter a valid amount')
     end
-
-    it 'raises an error if balance goes below zero' do
-      expect { subject.withdraw(10) }.to raise_error('You do not have enough money to withdraw')
-    end
   end
 end
