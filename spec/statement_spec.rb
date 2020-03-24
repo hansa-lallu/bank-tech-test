@@ -13,7 +13,7 @@ describe Statement do
       allow(transactions).to receive(:log).and_return([['23/03/2020', '', '500.00', '2500.00'], ['24/03/2020', '2000.00', '', '3000.00']])
       allow(account).to receive(:transactions).and_return(transactions)
 
-      statement = Statement.new(account)      
+      statement = Statement.new(account)
       expect(statement.format(statement.account.transactions.log)).to eq(['23/03/2020 || || 500.00 || 2500.00', '24/03/2020 || 2000.00 || || 3000.00'])
     end
   end
@@ -24,7 +24,7 @@ describe Statement do
       allow(account).to receive(:transactions).and_return(transactions)
 
       statement = Statement.new(account)
-      expect(statement.sort_by_date).to eq([ ['25/03/2020', '2000.00', '', '3000.00'], ['24/03/2020', '2000.00', '', '3000.00'], ['13/02/2020', '', '500.00', '2500.00']])
+      expect(statement.sort_by_date).to eq([['25/03/2020', '2000.00', '', '3000.00'], ['24/03/2020', '2000.00', '', '3000.00'], ['13/02/2020', '', '500.00', '2500.00']])
     end
   end
 
@@ -33,7 +33,7 @@ describe Statement do
       allow(transactions).to receive(:log).and_return([['23/03/2020', '2000.00', '', '3000.00'], ['24/03/2020', '', '500.00', '2500.00']])
       allow(account).to receive(:transactions).and_return(transactions)
 
-      statement = Statement.new(account)     
+      statement = Statement.new(account)
       expect { statement.display }.to output("date || credit || debit || balance\n24/03/2020 || || 500.00 || 2500.00\n23/03/2020 || 2000.00 || || 3000.00").to_stdout
     end
   end
