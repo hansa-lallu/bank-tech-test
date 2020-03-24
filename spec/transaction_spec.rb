@@ -5,7 +5,7 @@ describe Transaction do
 
   describe '#initialize' do 
     it 'has an empty transaction log on initalization' do 
-      expect(subject.transaction_log).to eq([])
+      expect(subject.log).to eq([])
     end 
   end
 
@@ -14,8 +14,9 @@ describe Transaction do
       Timecop.freeze do
         date = Time.now.strftime("%d/%m/%Y")
         amount = 1000
-        balance = 500
-        expect(subject.entry(amount, balance)).to eq(["#{date}","1000", '', "1500"])
+        balance = 1500
+
+        expect(subject.entry(amount, balance, :credit)).to eq([["#{date}", '1000', '', '1500']])
       end
     end 
   end

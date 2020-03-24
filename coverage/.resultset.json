@@ -57,11 +57,14 @@
           null,
           1,
           8,
+          8,
           null,
           null,
           1,
           6,
           null,
+          5,
+          5,
           5,
           null,
           null,
@@ -70,6 +73,9 @@
           4,
           null,
           3,
+          3,
+          3,
+          null,
           null,
           null
         ]
@@ -83,23 +89,12 @@
           1,
           1,
           null,
-          null,
-          1,
-          1,
-          1,
-          1,
-          null,
-          null,
           null
         ]
       },
       "/Users/hansa/makers/week10/bank-tech-test/lib/statement.rb": {
         "lines": [
           1,
-          1,
-          1,
-          null,
-          null,
           1,
           1,
           null,
@@ -125,6 +120,7 @@
           1,
           1,
           1,
+          null,
           1,
           null,
           null,
@@ -138,16 +134,19 @@
           1,
           null,
           1,
-          2,
+          10,
           null,
           null,
           1,
-          1,
+          9,
+          6,
+          null,
+          null,
           null,
           null
         ]
       }
     },
-    "timestamp": 1585008047
+    "timestamp": 1585050515
   }
 }

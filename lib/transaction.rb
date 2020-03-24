@@ -1,11 +1,14 @@
 class Transaction
-  attr_reader :transaction_log
+  attr_reader :log
 
   def initialize
-    @transaction_log = []
+    @log = []
   end
 
-  def entry(amount, balance)
-    ["24/03/2020", "1000", "", "1500"]
+  def entry(amount, balance, type)
+    if type == :credit
+      @log << [Time.now.strftime("%d/%m/%Y"), "#{amount}", '', "#{balance}"]
+    end
   end
 end 
+
