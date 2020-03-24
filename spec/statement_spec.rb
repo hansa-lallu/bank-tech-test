@@ -20,7 +20,7 @@ describe Statement do
       end
     end
 
-    it 'prints a statement from most recent transactions to last' do
+    it 'prints a statement from most recent transactions first' do
         allow(transactions).to receive(:log).and_return([["23/03/20", '', "500.00", "2500.00"], ["24/03/20", "2000.00", '', "3000.00"]])
         statement = Statement.new(transactions)
         

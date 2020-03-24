@@ -5,7 +5,7 @@
 Requirements
 ----
 
-You should be able to interact with your code via a REPL like IRB or the JavaScript console. (You don't need to implement a command line interface that takes input from STDIN.)
+Interact with your code via a REPL like IRB or the JavaScript console. (You don't need to implement a command line interface that takes input from STDIN.)
 Deposits, withdrawal.
 Account statement (date, amount, balance) printing.
 Data can be kept in memory (it doesn't need to be stored to a database or anything).
@@ -26,11 +26,24 @@ date || credit || debit || balance
 10/01/2012 || 1000.00 || || 1000.00
 ```
 
+Assumptions
+---
+
+- Opening balance is zero
+- statement in chronological order
+- One user 
+
+Edge cases
+---
+
+- invalid deposit or withdraw amount e.g. ('wf')
+- Overdraft (negative balance) is acceptable
+
 Approach
 ---
 Classes:
   - Account class (deposit, withdraw and balance method and error raising if necessary), ✅
   - Statement class -printing.
-  - transaction class was added later  - (date, amount, balance, type) 
+  - transaction class was added later  - (date, amount, balance, type) ✅
 
 
