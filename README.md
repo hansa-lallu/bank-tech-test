@@ -30,7 +30,7 @@ Assumptions
 ---
 
 - Opening balance is zero
-- statement in chronological order
+- statement to be printed with most recent transaction first 
 - One user 
 
 Edge cases
@@ -41,14 +41,13 @@ Edge cases
 
 Approach
 ---
-
-Initially decided to do two classes. One account class that looks after the accounts balance, deposit & withdraws. 
-Attempted the second class; Statement, to look after the printing of transactions. Half way through decided to add additional class called transactions.
-The transaction class looked after every entry 
+- TDD
+- Initially decided to do two classes (Account and Statement). One account class that looks after the accounts balance, deposit & withdraws. I then attempted the second class; Statement, to look after the printing of transactions. Half way through decided to add additional class called transactions.
+The transaction class looked after every transaction entry 
 
 Classes:
   - Account class (deposit, withdraw and balance method and error raising if necessary), ✅
-  - Statement class -printing. ✅
   - transaction class was added later  - (date, amount, balance, type) ✅
+  - Statement class -printing. ✅
 
 

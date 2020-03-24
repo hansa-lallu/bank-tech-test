@@ -1,3 +1,5 @@
+require 'account'
+
 class Statement
   attr_reader :transactions
 
