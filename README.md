@@ -1,8 +1,7 @@
 ## Bank Tech Test ##
 
-Work alone to build a bank app to the specifications below.
-
 ## Specification ##
+Work alone to build a bank app to the specifications below.
 
 Requirements
 ----
