@@ -1,4 +1,5 @@
 class Statement
+  attr_reader :transactions
 
   def initialize(transactions = Transaction.new)
     @transactions = transactions
@@ -8,10 +9,16 @@ class Statement
     "date || credit || debit || balance"
   end
 
-  def print
-    puts header
-    @transactions.log.reverse.each { |transaction| puts transaction.join(' || ')  }
+  def sort_by_date
+    @transactions.reverse
   end
-
+  
+  def format(transactions)
+    transactions.map { |transaction| transaction.join(" || ").gsub("  ", " ")  }
+  end
+  
+  def display
+    puts header
+    print format(sort_by_date).join("\n")
+  end
 end
-

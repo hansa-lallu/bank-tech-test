@@ -9,22 +9,25 @@ describe Statement do
     expect(subject.header).to eq('date || credit || debit || balance')
   end
 
-  describe '#print' do
-    it 'prints a statement of transaction logs' do
-      Timecop.freeze do
-        date = Time.now.strftime("%d/%m/%Y")
-        allow(transactions).to receive(:log).and_return([[date, '', "500.00", "2500.00"], [date, "2000.00", '', "3000.00"]])
-        statement = Statement.new(transactions)
-        
-        expect { statement.print }.to output("date || credit || debit || balance\n#{date} || || 500.00 || 2500.00\n#{date} || 2000.00 || || 3000.00").to_stdout
-      end
+  describe '#format' do
+    it 'formats the transaction logs' do
+      allow(transactions).to receive(:log).and_return([["23/03/2020", '', "500.00", "2500.00"], ["24/03/2020", "2000.00", '', "3000.00"]])
+      statement = Statement.new(transactions)
+      expect(statement.format(statement.transactions.log)).to eq(["23/03/2020 || || 500.00 || 2500.00", "24/03/2020 || 2000.00 || || 3000.00"])
     end
+  end
+    
+  describe '#sort_by_date' do
+    it 'formats transactions by date in desc order' do
+      statement = Statement.new([["13/02/2020", '', "500.00", "2500.00"], ["24/03/2020", "2000.00", '', "3000.00"]])
+      expect(statement.sort_by_date).to eq([["24/03/2020", "2000.00", '', "3000.00"], ["13/02/2020", '', "500.00", "2500.00"]])
+    end
+  end
 
+  describe '#display' do
     it 'prints a statement from most recent transactions first' do
-        allow(transactions).to receive(:log).and_return([["23/03/20", '', "500.00", "2500.00"], ["24/03/20", "2000.00", '', "3000.00"]])
-        statement = Statement.new(transactions)
-        
-        expect { statement.print }.to output("date || credit || debit || balance\n24/03/20 || || 500.00 || 2500.00\n23/03/20 || 2000.00 || || 3000.00").to_stdout
+      statement = Statement.new([["23/03/2020", "2000.00", '', "3000.00"], ["24/03/2020", '', "500.00", "2500.00"]])
+      expect { statement.display }.to output("date || credit || debit || balance\n24/03/2020 || || 500.00 || 2500.00\n23/03/2020 || 2000.00 || || 3000.00").to_stdout
     end
   end
 end
