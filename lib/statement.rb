@@ -6,7 +6,7 @@ class Statement
   end
 
   def header
-    "date || credit || debit || balance"
+    'date || credit || debit || balance'
   end
 
   def sort_by_date
@@ -14,7 +14,7 @@ class Statement
   end
   
   def format(transactions)
-    transactions.map { |transaction| transaction.join(" || ").gsub("  ", " ")  }
+    transactions.map { |transaction| transaction.join(' || ').gsub('  ', ' ')  }
   end
   
   def display

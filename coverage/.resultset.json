@@ -71,17 +71,14 @@
           3,
           3,
           null,
-          null,
           null
         ]
       },
       "/Users/hansa/makers/week10/bank-tech-test/spec/statement_spec.rb": {
         "lines": [
           1,
-          1,
           null,
           1,
-          null,
           2,
           null,
           1,
@@ -92,6 +89,7 @@
           1,
           1,
           1,
+          null,
           1,
           null,
           null,
@@ -99,6 +97,7 @@
           1,
           1,
           1,
+          null,
           1,
           null,
           null,
@@ -106,11 +105,8 @@
           1,
           1,
           1,
+          null,
           2,
-          null,
-          null,
-          null,
-          null,
           null,
           null,
           null
@@ -150,7 +146,6 @@
           1,
           null,
           1,
-          null,
           1,
           1,
           1,
@@ -172,9 +167,8 @@
           1,
           1,
           1,
+          null,
           1,
-          null,
-          null,
           null,
           null,
           null,
@@ -201,6 +195,6 @@
         ]
       }
     },
-    "timestamp": 1585076008
+    "timestamp": 1585076860
   }
 }
