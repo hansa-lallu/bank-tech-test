@@ -14,11 +14,11 @@ Requirements
 Acceptance criteria
 ---
 
-Given a client makes a deposit of 1000 on 10-01-2012
-And a deposit of 2000 on 13-01-2012
-And a withdrawal of 500 on 14-01-2012
-When she prints her bank statement
-Then she would see
+- Given a client makes a deposit of 1000 on 10-01-2012
+- And a deposit of 2000 on 13-01-2012
+- And a withdrawal of 500 on 14-01-2012
+- When she prints her bank statement
+- Then she would see
 
 ```
 date || credit || debit || balance
@@ -60,26 +60,68 @@ Assumptions
 
 Edge cases
 ---
-
 - invalid deposit or withdraw amount e.g. ('wf')
 - Overdraft (negative balance) is acceptable
 
+Installation
+---
+
+- clone this repository to your local machine and cd into the directory 
+- run the command `gem install bundle` and then `bundle`
+
+How to run
+---
+- Launch IRB using the command `irb` in your terminal
+- require the ruby files
+- Make a new account
+- Make some deposits and withdraws
+- Make a new statement, passing in your account
+- Display your statement
+
+```
+2.7.0 :001 > require './lib/account.rb'
+ => true 
+2.7.0 :002 > require './lib/statement.rb'
+ => true 
+2.7.0 :003 > account = Account.new
+2.7.0 :004 > account
+ => #<Account:0x00007faca8900248 @balance=0, @transactions=#<Transaction:0x00007faca8900220 @log=[]>> 
+2.7.0 :005 > account.deposit(500)
+ => 500 
+2.7.0 :006 > account.deposit(1500)
+ => 2000 
+2.7.0 :007 > account.withdraw(750)
+ => 1250 
+2.7.0 :008 > account
+ => #<Account:0x00007faca8900248 @balance=1250, @transactions=#<Transaction:0x00007faca8900220 @log=[["24/03/2020", "500.00", "", "500.00"], ["24/03/2020", "1500.00", "", "2000.00"], ["24/03/2020", "", "750.00", "1250.00"]]>> 
+2.7.0 :009 > statement = Statement.new(account)
+2.7.0 :010 > statement
+ => #<Statement:0x00007facaa08a760 @account=#<Account:0x00007faca8900248 @balance=1250, @transactions=#<Transaction:0x00007faca8900220 @log=[["24/03/2020", "500.00", "", "500.00"], ["24/03/2020", "1500.00", "", "2000.00"], ["24/03/2020", "", "750.00", "1250.00"]]>>> 
+2.7.0 :011 > statement.display
+date || credit || debit || balance
+24/03/2020 || 500.00 || || 500.00
+24/03/2020 || 1500.00 || || 2000.00
+24/03/2020 || || 750.00 || 1250.00 => nil
+```
 Tech Used
 ---
 - Ruby
 - RSpec
-- Rubocop
 - Simplecov
+- Rubocop
+
+Testing
+---
+Testing can be done using RSpec by running the command `rspec`
 
 Approach
 ---
 - TDD
-- Initially decided to do two classes (Account and Statement). One account class that looks after the accounts balance, deposit & withdraws. I then attempted the second class; Statement, to look after the printing of transactions. Half way through decided to add additional class called transactions.
-The transaction class looked after every transaction entry 
+- Initially decided to do two classes (Account and Statement). One account class that looks after the accounts balance, deposit & withdraws. I progressed onto the second class, Statement. Statement was used to print the transactions. Half way through decided to add additional class called transactions. The transaction class looked after every transaction entry.
 
 Classes:
-  - Account class (deposit, withdraw and balance method and error raising if necessary), ✅
-  - transaction class was added later  - (date, amount, balance, type) ✅
-  - Statement class -printing. ✅
+  - Account class - (deposit, withdraw and balance method and error raising if necessary), ✅
+  - transaction class - (date, amount, balance, type) ✅
+  - Statement class - display ✅
 
 

@@ -1,10 +1,10 @@
-require 'account'
+require 'time'
 
 class Statement
-  attr_reader :transactions
+  attr_reader :account
 
-  def initialize(transactions = Transaction.new)
-    @transactions = transactions
+  def initialize(account = Account.new)
+    @account = account
   end
 
   def header
@@ -12,7 +12,7 @@ class Statement
   end
 
   def sort_by_date
-    @transactions.sort do |transaction_x, transaction_y| 
+    @account.transactions.log.sort do |transaction_x, transaction_y| 
        Time.parse(transaction_y[0]) <=> Time.parse(transaction_x[0])
     end
   end
