@@ -79,6 +79,7 @@ How to run
 - Make a new statement, passing in your account
 - Display your statement
 
+Example using IRB
 ```
 2.7.0 :001 > require './lib/account.rb'
  => true 
