@@ -28,10 +28,10 @@ describe Account do
       expect(subject.withdraw(20)).to eq(80)
     end
 
-    it 'can calculate multiple withdraws' do
-      subject.deposit(500)
-      subject.withdraw(100)
-      expect(subject.withdraw(100)).to eq(300)
+    it 'can calculate multiple withdraws and go into overdraft' do
+      subject.deposit(100)
+      subject.withdraw(200)
+      expect(subject.withdraw(100)).to eq(-200)
     end
 
     it 'raises an error if ammount is not a valid number' do

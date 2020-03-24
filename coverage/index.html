@@ -14,7 +14,7 @@
       <img src="./assets/0.12.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2020-03-24T16:24:05+00:00">2020-03-24T16:24:05+00:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2020-03-24T16:43:37+00:00">2020-03-24T16:43:37+00:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -1236,7 +1236,7 @@
 
             
 
-            <code class="ruby">    it &#39;can calculate multiple withdraws&#39; do</code>
+            <code class="ruby">    it &#39;can calculate multiple withdraws and go into overdraft&#39; do</code>
           </li>
         </div>
       
@@ -1247,7 +1247,7 @@
 
             
 
-            <code class="ruby">      subject.deposit(500)</code>
+            <code class="ruby">      subject.deposit(100)</code>
           </li>
         </div>
       
@@ -1258,7 +1258,7 @@
 
             
 
-            <code class="ruby">      subject.withdraw(100)</code>
+            <code class="ruby">      subject.withdraw(200)</code>
           </li>
         </div>
       
@@ -1269,7 +1269,7 @@
 
             
 
-            <code class="ruby">      expect(subject.withdraw(100)).to eq(300)</code>
+            <code class="ruby">      expect(subject.withdraw(100)).to eq(-200)</code>
           </li>
         </div>
       
@@ -1630,7 +1630,7 @@
 
             
 
-            <code class="ruby">    it &#39;prints a statement from most recent transactions to last&#39; do</code>
+            <code class="ruby">    it &#39;prints a statement from most recent transactions first&#39; do</code>
           </li>
         </div>
       
