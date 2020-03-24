@@ -5,10 +5,11 @@
 Requirements
 ----
 
-Interact with your code via a REPL like IRB or the JavaScript console. (You don't need to implement a command line interface that takes input from STDIN.)
-Deposits, withdrawal.
-Account statement (date, amount, balance) printing.
-Data can be kept in memory (it doesn't need to be stored to a database or anything).
+- You should be able to interact with your code via a REPL like IRB or the JavaScript console. (You don't need to implement a command line interface that takes input from STDIN.)
+- Deposits, withdrawal.
+- Account statement (date, amount, balance) printing.
+- Data can be kept in memory (it doesn't need to be stored to a database or anything).
+
 
 Acceptance criteria
 ---
@@ -26,6 +27,30 @@ date || credit || debit || balance
 10/01/2012 || 1000.00 || || 1000.00
 ```
 
+User stories
+---
+``` 
+As an account holder
+So I can keep a record of my balance
+I would like to see my balance 
+
+As an account holder
+So I can keep my money safe
+I would like to deposit some money into my account
+
+As an account holder
+So I can spend my cash
+I would like to withdraw some money from my account
+
+As an account holder
+So I know when money is going in and out 
+I would like to print a record of my transactions
+
+As an account holder
+So I can easily read my statement 
+I would like to see my statement with the latest transaction first
+```
+
 Assumptions
 ---
 
@@ -38,6 +63,13 @@ Edge cases
 
 - invalid deposit or withdraw amount e.g. ('wf')
 - Overdraft (negative balance) is acceptable
+
+Tech Used
+---
+- Ruby
+- RSpec
+- Rubocop
+- Simplecov
 
 Approach
 ---
