@@ -122,11 +122,10 @@ Approach
 - Initially decided to do two classes (Account and Statement). One account class that looks after the accounts balance, deposit & withdraws. I progressed onto the second class, Statement. Statement was used to print the transactions. Half way through decided to add additional class called transactions. The transaction class looked after every transaction entry.
 
 Classes:
-  - Account class - reasoning: only include account methods:  deposit, withdraw and balance method and raise error if necessary 
+  - Account class - reasoning: only include account methods:  deposit, withdraw methods, show balance and raise error if necessary 
   - transaction class - (date, amount, balance, type) reasoning: seperate class to see the transaction log 
   - Statement class - reasoning: used for formatting and displaying the statement with appropriate header
 
-Domain Model:
 
 
 
