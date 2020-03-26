@@ -85,25 +85,23 @@ Example using IRB
  => true 
 2.7.0 :002 > require './lib/statement.rb'
  => true 
-2.7.0 :003 > account = Account.new
-2.7.0 :004 > account
- => #<Account:0x00007faca8900248 @balance=0, @transactions=#<Transaction:0x00007faca8900220 @log=[]>> 
-2.7.0 :005 > account.deposit(500)
+2.7.0 :004 > account.deposit(500)
  => 500 
-2.7.0 :006 > account.deposit(1500)
+2.7.0 :005 > account.deposit(1500)
  => 2000 
-2.7.0 :007 > account.withdraw(750)
+2.7.0 :006 > account.withdraw(750)
  => 1250 
-2.7.0 :008 > account
- => #<Account:0x00007faca8900248 @balance=1250, @transactions=#<Transaction:0x00007faca8900220 @log=[["24/03/2020", "500.00", "", "500.00"], ["24/03/2020", "1500.00", "", "2000.00"], ["24/03/2020", "", "750.00", "1250.00"]]>> 
-2.7.0 :009 > statement = Statement.new(account)
-2.7.0 :010 > statement
- => #<Statement:0x00007facaa08a760 @account=#<Account:0x00007faca8900248 @balance=1250, @transactions=#<Transaction:0x00007faca8900220 @log=[["24/03/2020", "500.00", "", "500.00"], ["24/03/2020", "1500.00", "", "2000.00"], ["24/03/2020", "", "750.00", "1250.00"]]>>> 
-2.7.0 :011 > statement.display
+2.7.0 :007 > account
+ => #<Account:0x00007ff5d4947290 @balance=1250, @transactions=#<Transaction:0x00007ff5d49471c8 @log=[[2020-03-26 12:07:42.944129 +0000, "500.00", "", "500.00"], [2020-03-26 12:07:46.993757 +0000, "1500.00", "", "2000.00"], [2020-03-26 12:07:59.383444 +0000, "", "750.00", "1250.00"]]>> 
+2.7.0 :008 > statement = Statement.new(account)
+2.7.0 :009 > statement
+ => #<Statement:0x00007ff5d49c5898 @account=#<Account:0x00007ff5d4947290 @balance=1250, @transactions=#<Transaction:0x00007ff5d49471c8 @log=[[2020-03-26 12:07:42.944129 +0000, "500.00", "", "500.00"], [2020-03-26 12:07:46.993757 +0000, "1500.00", "", "2000.00"], [2020-03-26 12:07:59.383444 +0000, "", "750.00", "1250.00"]]>>> 
+2.7.0 :010 > statement.display
 date || credit || debit || balance
-24/03/2020 || 500.00 || || 500.00
-24/03/2020 || 1500.00 || || 2000.00
-24/03/2020 || || 750.00 || 1250.00 => nil
+26/03/2020 || || 750.00 || 1250.00
+26/03/2020 || 1500.00 || || 2000.00
+26/03/2020 || 500.00 || || 500.00 => nil 
+2.7.0 :011 > 
 ```
 Tech Used
 ---

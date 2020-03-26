@@ -5,11 +5,11 @@ class Transaction
     @log = []
   end
 
-  def enter_transaction(amount, balance, type)
+  def enter_transaction(date = Time.now, amount, balance, type)
     if type == :credit
-      @log << [Time.now.strftime('%d/%m/%Y'), "#{amount.to_f}0", '', "#{balance.to_f}0"]
+      @log << [date, "#{amount.to_f}0", '', "#{balance.to_f}0"]
     else
-      @log << [Time.now.strftime('%d/%m/%Y'), '', "#{amount.to_f}0", "#{balance.to_f}0"]
+      @log << [date, '', "#{amount.to_f}0", "#{balance.to_f}0"]
     end
   end
 end
